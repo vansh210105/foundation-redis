@@ -1,0 +1,21 @@
+{
+  "name": "foundation_redis",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "setup/src/index.js",
+  "scripts": {
+    "start": "node setup/src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "Node.js app using Redis and MongoDB",
+  "dependencies": {
+    "bullmq": "^5.81.1",
+    "express": "^4.21.2",
+    "ioredis": "^5.4.1",
+    "mongoose": "^8.6.0",
+    "stripe": "^22.3.2",
+    "ws": "^8.21.1"
+  }
+}
