@@ -46,7 +46,7 @@ app.get("/user/:id/json",async(req,resp)=>{
 })
 
 app.post("user/:id/hash",(req,resp)=>{
-    console.log("testing feature branchs")
+    console.log("This is the master branch");
     await redis.hset(`user:${req.params.id}:hash`,req.body);
     resp.json({savedAs:"hash"});
 })
