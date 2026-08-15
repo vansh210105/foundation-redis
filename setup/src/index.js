@@ -39,7 +39,7 @@ app.post("/user/:id/json",async(req,resp)=>{
 })
 
 app.get("/user/:id/json",async(req,resp)=>{
-    console.log("testing github")
+    console.log("This is the conflict branch");
     let res=await redis.get(`user:${req.params.id}:json`);
     resp.json({user:res?JSON.parse(res):null});
 
@@ -52,6 +52,7 @@ app.post("user/:id/hash",(req,resp)=>{
 })
 
 app.get("user/:id/hash",(req,resp)=>{
+
     let res=await redis.hgetall(`user:${req.params.id}:hash`);
     resp.json({res})
 })
