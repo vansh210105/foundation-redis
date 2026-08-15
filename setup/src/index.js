@@ -39,6 +39,7 @@ app.post("/user/:id/json",async(req,resp)=>{
 })
 
 app.get("/user/:id/json",async(req,resp)=>{
+    console.log("testing github")
     let res=await redis.get(`user:${req.params.id}:json`);
     resp.json({user:res?JSON.parse(res):null});
 
